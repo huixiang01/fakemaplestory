@@ -23,15 +23,27 @@ pip install libdw
 This program uses state machine, classes and a lot of if else statement to run. 
 
 - Players are first asked to jot down their names and starts the adventure. All classes except monster are initiated.
+
 - I used state machine to change location when needed. Below is the state diagram. I put an exit code as a secondary measure in get_next_values() on top of exiting right after the input just in case.
+
+  ![statediagram](./statediagram.png)
+
 - I have four public classes: Shop, Dungeon, Player and Monster. All classes have their distinct methods and they interact with one another. Hence, this is why I use public class instead.
+
 - To keep players entertained, I uses varied and random conversation by using if else statement and  random.randint().
+
 - Also, the damage inflicted, monster names and mesoes earned are obtained using random.randint() function.
+
 - Attacks are triggered when players chooses the attack type and the program would find the correct method using getattr() function.
+
 - Experience is gained by the amount of monster killed in that level/ levellimit(i.e. the number of monster for that level to level up) for each level
+
 - After each level up, experience would become zero and the number of monster to level up would be increased by 2, starting from 5.
+
 - A health system is used to keep track both players and monster health. This is done by using class states
+
 - When the player dies, experience would decrease by 10% of the levellimit and returns to town.
+
 - When job advancement, player gains new skills by triggering player.jobadvancement()
 
 <h2>How to Play FakeMapleStory</h2>

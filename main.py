@@ -395,8 +395,6 @@ class Location(sm.SM):
         if state == "Shop":
             if inp == "Dungeon" or inp == "4":
                 return("Dungeon", None)
-            elif inp == "Welcome": # not useful
-                return("Welcome", None)
             elif inp == "exit":
                 print(exit_message)
                 time.sleep(20)
